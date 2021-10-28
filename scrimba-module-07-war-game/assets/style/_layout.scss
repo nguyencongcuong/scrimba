@@ -1,0 +1,104 @@
+@use "variable" as *;
+@use "mixins" as *;
+
+body {
+	min-height: 100vh;
+}
+
+.main {
+	display: grid;
+	grid-template-areas: "score" "game-state" "cards" "buttons";
+	justify-content: center;
+	.game-state {
+		display: grid;
+		grid-template-areas: "winner" "score"  "remain-cards";
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		grid-gap: 10px;
+		
+		.winner {
+			grid-area: winner;
+		}
+		
+		.score {
+			grid-area: score;
+		}
+		
+		.remain {
+			grid-area: remain-cards;
+		}
+	}
+	
+	.cards {
+		grid-area: cards;
+	}
+	
+	.buttons {
+		grid-area: buttons;
+	}
+}
+
+.cards {
+	display: grid;
+	grid-template-areas: "card1 ." "card2 .";
+	justify-content: center;
+	
+	.card1 {
+		grid-area: card1;
+		border: 5px solid rgba(239, 206, 206, 0.47);
+	}
+	
+	.card2 {
+		grid-area: card2;
+		border: 5px solid rgba(218, 238, 245, 0.47);
+	}
+	
+	.card {
+		height: 163px;
+		width: 120px;
+		border-radius: 11px;
+		margin: .5rem;
+	}
+	
+}
+
+.score {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	
+	> div {
+		align-items: center;
+		border: 2px solid white;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		padding: 1rem;
+		
+		> span {
+			display: block;
+		}
+	}
+}
+
+.buttons {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+img {
+	animation: fadeIn 1s ease-in-out 0s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

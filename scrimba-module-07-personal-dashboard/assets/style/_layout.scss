@@ -1,0 +1,46 @@
+@use "variable" as *;
+@use "mixins" as *;
+
+body {
+	align-items: center;
+	background-blend-mode: darken;
+	background-color: rgba(51, 51, 51, 0.65);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	display: grid;
+	grid-template-columns: 2fr 3fr 2fr;
+	
+	grid-template-rows: 2fr 1fr 2fr;
+	justify-content: center;
+	justify-items: center;
+	min-height: 100vh;
+	width: 100vw;
+	
+	.section-unsplash-author {
+		grid-column: 1 / 2;
+		grid-row: 3 / 4;
+	}
+	
+	.section-weather {
+		grid-column: 3 / 4;
+		grid-row: 1 / 2;
+	}
+	
+	.section-clock {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+	}
+}
+
+
+.section-weather {
+	align-items: center;
+	display: flex;
+	flex-flow: column wrap;
+	
+	img {
+		width: 50px;
+	}
+}

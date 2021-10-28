@@ -1,0 +1,6 @@
+@use "mixins" as *;
+
+@include reset();
+@include remove-scrollbar();
+@include smooth-scroll();
+@include typography("Segoe UI", 16px);

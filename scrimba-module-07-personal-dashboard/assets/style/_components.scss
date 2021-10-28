@@ -1,0 +1,7 @@
+@use "variable" as *;
+@use "mixins" as *;
+
+.section-clock {
+	font-size: 2rem;
+	font-weight: 600;
+}

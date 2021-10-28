@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="Nguyễn Công Cương" name="author">
+	<link href="assets/style/main.css" rel="stylesheet">
+	<link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+	<title>Game bài</title>
+</head>
+<body>
+
+<main class="main">
+
+	<div class="game-state">
+
+		<div class="winner" id="winner-card">___</div>
+
+		<div class="score">
+			<div>
+				<span>Máy</span>
+				<span id="computer-score">0</span>
+			</div>
+			<div>
+				<span>Bạn</span>
+				<span id="player-score">0</span>
+			</div>
+		</div>
+
+		<div class="remain">Số lá bài còn lại: <span id="remain-cards"></span></div>
+
+	</div>
+
+	<div class="cards">
+		<div class="card card1" id="card-1"></div>
+		<div class="card card2" id="card-2"></div>
+	</div>
+
+	<div class="buttons">
+		<button id="new-deck-btn">Bài mới</button>
+		<button id="draw-btn">Rút bài</button>
+	</div>
+
+</main>
+
+
+<!--SCRIPT-->
+<script src="./assets/js/main.js"></script>
+</body>
+</html>

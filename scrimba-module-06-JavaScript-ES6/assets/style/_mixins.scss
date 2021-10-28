@@ -1,0 +1,210 @@
+@use "variable" as *;
+@use "sass:color";
+@use "sass:math";
+
+@mixin reset() {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		font-family: inherit;
+		font-size: inherit;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@mixin typography($regular, $size) {
+	html {
+		font-family: $regular, sans-serif;
+		font-size: $size;
+		line-height: 1.8;
+		@media (min-width: $breakpointSm) {
+			font-size: $size + 2;
+		}
+		@media (min-width: $breakpointMd) {
+			font-size: $size + 4;
+		}
+		@media (min-width: $breakpointXl) {
+			font-size: $size + 6;
+		}
+	}
+
+	body {
+		font-size: 1rem;
+	}
+
+	//Headings
+	h1 {
+		font-size: 2.2rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+	}
+
+	h4 {
+		font-size: 1.6rem;
+	}
+
+	h5 {
+		font-size: 1.4rem;
+	}
+
+	h6 {
+		font-size: 1.2rem;
+	}
+
+	// Blockquote
+	blockquote {
+		font-style: italic;
+		padding: 3em;
+	}
+	blockquote::before {
+		display: block;
+		content: "❝";
+		font-size: 2rem;
+		text-align: left;
+	}
+
+	blockquote::after {
+		display: block;
+		content: "❞";
+		font-size: 2rem;
+		text-align: right;
+	}
+
+	// List
+	ol, ul {
+		padding-left: 2em;
+	}
+
+
+	// Code
+	pre, code {
+		font-family: monospace;
+	}
+
+	// Image & Video
+	img {
+		width: 100%;
+		max-width: 100%;
+	}
+	video {
+		width: 100%;
+	}
+	figcaption {
+		font-size: .8rem;
+		font-style: italic;
+		text-align: center;
+	}
+
+	// Table
+	table {
+		border: 2px solid hsl(0, 0%, 20%);
+		width: 100%;
+
+		thead {
+			tr {
+				th {
+					background-color: #EEEEEE;
+					border: 1px solid hsl(0, 0%, 80%);
+					padding: .5em 1em;
+				}
+			}
+		}
+
+		tbody {
+			text-align: center;
+
+			tr {
+				td {
+					border: 1px solid hsl(0, 0%, 80%);
+					padding: .5em 1em;
+				}
+			}
+		}
+	}
+
+	// Common
+	h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, table, img, video, figcaption, pre {
+		margin-bottom: .7em;
+	}
+
+	//@for $i from 1 through 6 {
+	//  .heading-#{$i} {
+	//    font-size: (1rem + math.div($i, 3));
+	//  }
+	//}
+}
+
+/**
+ ** HOW TO USE
+ *? Apply this mixin to the parent element of <iframe>
+ *  <div class="iframe-div">
+ *      <iframe></iframe>
+ *  </div>
+ */
+
+@mixin responsive-iframe($x, $y) {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding-top: math.div($y, $x) * 100%;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/**
+ ** RATIO
+ *? Maintain the aspect ratio $x:$y 
+ *? HTML: <div> <div>{content}</div> </div>
+ *? The width property only works with relative units
+ */
+
+@mixin maintain-ratio($x, $y, $w) {
+	position: relative;
+	width: $w; // ? Work with vw, vh, %
+	&::before {
+		display: block;
+		content: "";
+		padding-top: math.div($y, $x) * 100;
+
+		> div {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+@mixin remove-scrollbar() {
+	html {
+		overflow-y: scroll;
+		-ms-overflow-style: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
+
+@mixin smooth-scroll() {
+	html {
+		scroll-behavior: smooth;
+	}
+}

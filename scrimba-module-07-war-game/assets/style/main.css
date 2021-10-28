@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/**
+ ** HOW TO USE
+ *? Apply this mixin to the parent element of <iframe>
+ *  <div class="iframe-div">
+ *      <iframe></iframe>
+ *  </div>
+ */
+/**
+ ** RATIO
+ *? Maintain the aspect ratio $x:$y 
+ *? HTML: <div> <div>{content}</div> </div>
+ *? The width property only works with relative units
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 3em;
+}
+
+blockquote::before {
+  display: block;
+  content: "❝";
+  font-size: 2rem;
+  text-align: left;
+}
+
+blockquote::after {
+  display: block;
+  content: "❞";
+  font-size: 2rem;
+  text-align: right;
+}
+
+ol, ul {
+  padding-left: 2em;
+}
+
+pre, code {
+  font-family: monospace;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+video {
+  width: 100%;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+button:disabled {
+  background-color: #CCCCCC;
+}
+
+table {
+  border: 2px solid #333333;
+  width: 100%;
+}
+table thead tr th {
+  background-color: #EEEEEE;
+  border: 1px solid #cccccc;
+  padding: 0.5em 1em;
+}
+table tbody {
+  text-align: center;
+}
+table tbody tr td {
+  border: 1px solid #cccccc;
+  padding: 0.5em 1em;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, table, img, video, figcaption, pre {
+  margin-bottom: 0.7em;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.main {
+  display: grid;
+  grid-template-areas: "score" "game-state" "cards" "buttons";
+  justify-content: center;
+}
+.main .game-state {
+  display: grid;
+  grid-template-areas: "winner" "score" "remain-cards";
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 10px;
+}
+.main .game-state .winner {
+  grid-area: winner;
+}
+.main .game-state .score {
+  grid-area: score;
+}
+.main .game-state .remain {
+  grid-area: remain-cards;
+}
+.main .cards {
+  grid-area: cards;
+}
+.main .buttons {
+  grid-area: buttons;
+}
+
+.cards {
+  display: grid;
+  grid-template-areas: "card1 ." "card2 .";
+  justify-content: center;
+}
+.cards .card1 {
+  grid-area: card1;
+  border: 5px solid rgba(239, 206, 206, 0.47);
+}
+.cards .card2 {
+  grid-area: card2;
+  border: 5px solid rgba(218, 238, 245, 0.47);
+}
+.cards .card {
+  height: 163px;
+  width: 120px;
+  border-radius: 11px;
+  margin: 0.5rem;
+}
+
+.score {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+.score > div {
+  align-items: center;
+  border: 2px solid white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+.score > div > span {
+  display: block;
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+img {
+  animation: fadeIn 1s ease-in-out 0s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  background: linear-gradient(to right bottom, #96BE96, #C4D0A5) no-repeat center center/cover;
+  color: white;
+}
+
+button {
+  background-color: #E8D494;
+  border: 2px solid white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  opacity: 0.6;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=main.css.map */

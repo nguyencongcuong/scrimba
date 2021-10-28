@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/**
+ ** HOW TO USE
+ *? Apply this mixin to the parent element of <iframe>
+ *  <div class="iframe-div">
+ *      <iframe></iframe>
+ *  </div>
+ */
+/**
+ ** RATIO
+ *? Maintain the aspect ratio $x:$y 
+ *? HTML: <div> <div>{content}</div> </div>
+ *? The width property only works with relative units
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 3em;
+}
+
+blockquote::before {
+  display: block;
+  content: "❝";
+  font-size: 2rem;
+  text-align: left;
+}
+
+blockquote::after {
+  display: block;
+  content: "❞";
+  font-size: 2rem;
+  text-align: right;
+}
+
+ol, ul {
+  padding-left: 2em;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  opacity: 0.8;
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+button:hover {
+  opacity: 1;
+  box-shadow: 0 0 3px 1px rgba(234, 231, 231, 0.58);
+}
+button:disabled {
+  background-color: #CCCCCC;
+}
+button:focus {
+  outline: none;
+}
+
+pre, code {
+  font-family: monospace;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+video {
+  width: 100%;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+table {
+  border: 2px solid #333333;
+  width: 100%;
+}
+table thead tr th {
+  background-color: #EEEEEE;
+  border: 1px solid #cccccc;
+  padding: 0.5em 1em;
+}
+table tbody {
+  text-align: center;
+}
+table tbody tr td {
+  border: 1px solid #cccccc;
+  padding: 0.5em 1em;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, table, img, video, figcaption, pre {
+  margin-bottom: 0.7em;
+}
+
+body {
+  align-items: center;
+  background-blend-mode: darken;
+  background-color: rgba(51, 51, 51, 0.65);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 2fr 1fr 2fr;
+  justify-content: center;
+  justify-items: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+body .section-unsplash-author {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+body .section-weather {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+body .section-clock {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.section-weather {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+}
+.section-weather img {
+  width: 50px;
+}
+
+.section-clock {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=main.css.map */

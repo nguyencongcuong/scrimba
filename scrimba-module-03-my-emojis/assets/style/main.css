@@ -1,0 +1,121 @@
+:root {
+  --color-primary: #f5f5f5;
+  --color-primary-light: #ffffff;
+  --color-primary-dark: #c2c2c2;
+  --color-secondary: #424242;
+  --color-secondary-light: #6d6d6d;
+  --color-secondary-dark: #1b1b1b;
+  --color-text-primary: #616161;
+  --color-text-secondary: #f5f5f5;
+  --space-0: 0;
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --screen-xs: 320px;
+  --screen-sm: 640px;
+  --screen-md: 720px;
+  --screen-lg: 992px;
+  --screen-xl: 1280px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100%;
+  line-height: 1.8;
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  background: #dad299;
+  background: -webkit-linear-gradient(to right, #dad299, #b0dab9);
+  background: linear-gradient(to right, #dad299, #b0dab9); 
+  padding: var(--space-2);
+  width: 100vw;
+  height: 100vh;
+}
+
+input {
+  border: none;
+  border-radius: 0;
+  margin: var(--space-1) 0;
+  padding: var(--space-1);
+  width: 100%;
+}
+input:focus {
+  outline: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  background-color: rgba(255, 255, 255, 0.733);
+  color: #424242;
+  padding: var(--space-1);
+
+  text-align: center;
+}
+
+.emoji-app {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.733);
+  padding: var(--space-2);
+
+  max-width: 640px;
+}
+.emoji-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.emoji-wrapper {
+  flex: 1 1 auto;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: var(--space-1);
+}
+.emoji {
+  font-size: 2rem;
+}
+.button-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  flex: 1 1 auto;
+
+  border: 1px solid white;
+  border-radius: 0;
+  color: white;
+  padding: var(--space-1) var(--space-2);
+}
+.btn--add {
+  background-color: #5d7a5d;
+}
+.btn--remove {
+  background-color: #7a5d5d;
+}

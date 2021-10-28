@@ -1,0 +1,45 @@
+@use "mixins" as *;
+@use "variable" as *;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+@include reset();
+@include remove-scrollbar();
+@include smooth-scroll();
+@include typography("Nunito", 16px);
+
+input {
+	border-radius: 0.5em;
+	border: 2px solid rgba(0, 0, 0, .3);
+	padding: .5rem 1rem;
+	margin-bottom: .5em;
+	transition: all .3s ease-in-out;
+	height: 3rem;
+	width: 100%;
+
+	&:focus, &:hover {
+		outline: none;
+		border-color: rgba(0,0,0,0.3);
+		box-shadow: 1px 1.5px 3px rgba(0,0,0,0.2);
+	}
+
+	&::placeholder {
+		opacity: 0.5;
+		text-align: center;
+	}
+}
+
+.btn {
+	height: 3rem;
+	border-radius: 0.5em;
+	border: none;
+	padding: .5rem 1rem;
+	margin-bottom: .5em;
+	color: $color-white;
+	letter-spacing: .2rem;
+	cursor: pointer;
+	width: 100%;
+}
+
+.btn.btn--primary {
+	background: $color-gradient;
+}

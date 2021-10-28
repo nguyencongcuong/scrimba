@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/**
+ ** HOW TO USE
+ *? Apply this mixin to the parent element of <iframe>
+ *  <div class="iframe-div">
+ *      <iframe></iframe>
+ *  </div>
+ */
+/**
+ ** RATIO
+ *? Maintain the aspect ratio $x:$y 
+ *? HTML: <div> <div>{content}</div> </div>
+ *? The width property only works with relative units
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 3em;
+}
+
+blockquote::before {
+  display: block;
+  content: "❝";
+  font-size: 2rem;
+  text-align: left;
+}
+
+blockquote::after {
+  display: block;
+  content: "❞";
+  font-size: 2rem;
+  text-align: right;
+}
+
+ol, ul {
+  padding-left: 2em;
+}
+
+pre, code {
+  font-family: monospace;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+video {
+  width: 100%;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+table {
+  border: 2px solid #333333;
+  width: 100%;
+}
+table thead tr th {
+  background-color: #EEEEEE;
+  border: 1px solid #cccccc;
+  padding: 0.5em 1em;
+}
+table tbody {
+  text-align: center;
+}
+table tbody tr td {
+  border: 1px solid #cccccc;
+  padding: 0.5em 1em;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, table, img, video, figcaption, pre {
+  margin-bottom: 0.7em;
+}
+
+h1 {
+  color: #c2a642;
+}
+
+h1 {
+  color: #666;
+  letter-spacing: 1rem;
+}
+
+.test-img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.shape {
+  border-bottom: 50px solid hotpink;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 0;
+  width: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

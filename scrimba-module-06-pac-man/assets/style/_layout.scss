@@ -1,0 +1,72 @@
+@use "variable" as *;
+@use "mixins" as *;
+
+body {
+	padding: $space2;
+}
+
+.grid {
+	border: solid #405241;
+	box-sizing: content-box;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 420px;
+}
+
+.grid div {
+	height: 15px;
+	width: 15px;
+}
+
+.pac-dot {
+	background-color: #D4E7C4;
+	border: 5px solid white;
+}
+
+.wall {
+	background-color: #4E7BA8;
+}
+
+.ghost-lair {
+	background-color: #F5F5F5;
+}
+
+.power-pellet {
+	background-color: #72B90E;
+	border-radius: 7.5px;
+}
+
+.pacman {
+	background-color: #DCB83D;
+	border: none;
+	border-radius: 7.5px;
+}
+
+
+// Ghosts
+
+.blinky {
+	background-color: red;
+	border: none;
+}
+
+.pinky {
+	background-color: pink;
+	border: none;
+}
+
+.inky {
+	background-color: blue;
+	border: none;
+}
+
+.clyde {
+	background-color: orange;
+	border: none;
+}
+
+.scared-ghost {
+	background-color: darkorange;
+	border: none;
+}

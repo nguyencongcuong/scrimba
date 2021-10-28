@@ -1,0 +1,115 @@
+// BASIC
+
+*,
+::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: "Source Code", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+body {
+	margin: auto;
+	max-width: 640px;
+}
+
+// LAYOUT
+
+.card {
+	display: flex;
+	flex-flow: column wrap;
+	
+	&__head {
+		flex: 1 1 40%;
+		line-height: 0;
+		> img {
+			min-height: 500px;
+		}
+	}
+	
+	&__body {
+		align-content: space-between;
+		display: flex;
+		flex: 2 1 60%;
+		flex-flow: row wrap;
+		padding: 2em;
+	}
+	
+	&__title {
+		font-weight: 800;
+		margin-bottom: 1em;
+		width: 100%;
+	}
+	
+	&__desc {
+		margin-bottom: 1em;
+		width: 100%;
+	}
+	
+	&__time {
+		align-self: flex-start;
+		flex-basis: 30px;
+		margin-right: auto;
+	}
+	
+	&__button {
+		align-self: flex-end;
+		flex-basis: 50%;
+		margin-left: auto;
+		
+	}
+	
+	@media (min-width: 500px) {
+		flex-flow: row wrap;
+		&__head {
+			> img {
+				min-height: 320px;
+			}
+		}
+		&__body {
+		
+		}
+	}
+}
+
+// STYLE
+.card {
+	&__head {
+		img {
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+	
+	&__body {
+		background-color: #111D4A;
+	}
+	
+	&__title {
+		color: #05CBE9;
+	}
+	
+	&__desc {
+		color: #A6ABBC;
+	}
+	
+	&__time {
+		color: #A6ABBC;
+	}
+	
+	&__button {
+		background-color: #05CBE9;
+		border: none;
+		color: rgba(3, 3, 3, 0.7);
+		font-weight: 600;
+		padding: 0.5em 1em;
+		text-transform: uppercase;
+	}
+}

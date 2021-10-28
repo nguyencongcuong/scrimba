@@ -1,0 +1,21 @@
+@use "variable" as *;
+@use "mixins" as *;
+
+body {
+	background: linear-gradient(to right bottom, #96BE96, #C4D0A5) no-repeat center center/cover;
+	color: white;
+}
+
+button {
+	background-color: #E8D494;
+	border: 2px solid white;
+	font-weight: 600;
+	padding: 0.5rem 1rem;
+	text-transform: uppercase;
+	opacity: 0.6;
+	transition: all .5s ease-in-out;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,89 @@
+:root {
+  --color-primary: #cca221;
+  --color-primary-light: #f3f29d;
+  --color-primary-dark: #504f2e;
+  --color-secondary: #424242;
+  --color-secondary-light: #6d6d6d;
+  --color-secondary-dark: #1b1b1b;
+  --color-text-primary: #223c0c;
+  --color-text-secondary: #f5f5f5;
+  --space-0: 0;
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --screen-xs: 320px;
+  --screen-sm: 640px;
+  --screen-md: 720px;
+  --screen-lg: 992px;
+  --screen-xl: 1280px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100%;
+  line-height: 1.8;
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  background: url(../images/blackjack-table.jpg) center center/cover no-repeat;
+  color: var(--color-text-secondary);
+  text-align: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: var(--space-1);
+}
+
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.message {
+  font-style: italic;
+}
+
+.game-buttons {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+  margin: var(--space-1) auto;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 5px;
+  padding: var(--space-1) var(--space-2);
+
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  transition: all .3s ease-in-out;
+}
+.btn:hover {
+  background-color: var(--color-primary-light);
+}

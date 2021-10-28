@@ -1,0 +1,19 @@
+@use "sass:color";
+@use "sass:math";
+
+$color-orange: #EF811A;
+$color-black: #404040;
+$color-white: #FFFFFF;
+$color-gradient: linear-gradient(to right, #FF713B, #FFA51B);
+
+$space1: 1rem;
+$space2: 2rem;
+$space3: 3rem;
+$space4: 4rem;
+$space5: 5rem;
+
+$breakpointXs: 320px; // Extra small devices (phones, 320px and down)
+$breakpointSm: 640px; // Small devices (portrait tablets and large phones, 600px and up)
+$breakpointMd: 768px; // Medium devices (landscape tablets, 768px and up)
+$breakpointLg: 1024px; // Large devices (laptops/desktops, 992px and up)
+$breakpointXl: 1280px; // Extra large devices (large laptops and desktops, 1200px and up)

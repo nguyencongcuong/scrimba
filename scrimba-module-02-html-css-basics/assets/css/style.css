@@ -1,0 +1,160 @@
+/* Variables */
+
+:root {
+  --color-dark: #3e423c;
+  --color-green: #9ea199;
+  --color-yellow: #ceb400;
+  --color-white: white;
+  --color-light: whitesmoke;
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --radius-sm: 5px;
+}
+
+/* Basic */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100%;
+  line-height: 1.8;
+}
+
+body {
+  background-color: var(--color-light);
+  padding: var(--space-2);
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+p, ul, ol {
+  margin-bottom: var(--space-1);
+}
+
+ul, ol {
+  padding-left: var(--space-1);
+}
+
+a {
+  color: var(--color-light);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .5s ease-in-out;
+}
+a:hover {
+  color: var(--color-dark);
+}
+
+/* Utilities */
+
+.text-yellow {
+  color: var(--color-yellow);
+}
+.text-white {
+  color: var(--color-white)
+}
+
+
+/* 0. Layout */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  max-width: 1280px;
+  margin: var(--space-2) auto;
+}
+
+/* 1. Header */
+.header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-dark);
+  border-radius: var(--radius-sm);
+  color: var(--color-white);
+  padding: var(--space-1);
+}
+.header .header__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* 2. Main Content */
+
+.main-content {
+  /* width: 100%%; */
+
+}
+.post-header {
+  background-color: var(--color-dark);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-2);
+  padding: var(--space-2);
+}
+.post-body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.post-body .post-body__image {
+  background-color: #423f4d;
+  background-image: url("../images/lizard-image-01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--radius-sm);
+  width: 100%;
+  height: 100vh;
+}
+.post-body .post-body__content {
+  background-color: var(--color-white);
+  padding: var(--space-2);
+  width: 100%;
+}
+
+/* 3. Sidebar */
+
+.sidebar {
+  background-color: var(--color-green);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+  width: 100%;
+}
+.sidebar__header {
+  background-color: var(--color-dark);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-2);
+  padding: var(--space-2);
+}
+
+
+@media (min-width: 640px) {
+  body {
+    padding: 0;
+  }
+  .header {
+    border-radius: 0;
+  }
+  .main-content {
+    margin-right: var(--space-2);
+    width: calc(70% - var(--space-2));
+  }
+  .post-body .post-body__image { width: 50%; height: unset;}
+  .post-body .post-body__content {
+    border-radius: var(--radius-sm);
+    box-shadow: 5px 5px 3px rgb(233, 232, 232);
+    width: calc(50% - var(--space-2));
+    margin-left: var(--space-2);
+  }
+  .sidebar { width: 30%;}
+}

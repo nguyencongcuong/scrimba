@@ -1,0 +1,292 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+/**
+ ** HOW TO USE
+ *? Apply this mixin to the parent element of <iframe>
+ *  <div class="iframe-div">
+ *      <iframe></iframe>
+ *  </div>
+ */
+/**
+ ** RATIO
+ *? Maintain the aspect ratio $x:$y 
+ *? HTML: <div> <div>{content}</div> </div>
+ *? The width property only works with relative units
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+small {
+  font-size: 0.7rem;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 3em;
+}
+
+blockquote::before {
+  display: block;
+  content: "❝";
+  font-size: 2rem;
+  text-align: left;
+}
+
+blockquote::after {
+  display: block;
+  content: "❞";
+  font-size: 2rem;
+  text-align: right;
+}
+
+ol, ul {
+  padding-left: 2em;
+}
+
+pre, code {
+  font-family: monospace;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+video {
+  width: 100%;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+table {
+  border: 2px solid #333333;
+  width: 100%;
+}
+table thead tr th {
+  background-color: #EEEEEE;
+  border: 1px solid #cccccc;
+  padding: 0.5em 1em;
+}
+table tbody {
+  text-align: center;
+}
+table tbody tr td {
+  border: 1px solid #cccccc;
+  padding: 0.5em 1em;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, table, img, video, figcaption, pre {
+  margin-bottom: 1em;
+}
+
+input {
+  border-radius: 0.5em;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5em;
+  transition: all 0.3s ease-in-out;
+  height: 3rem;
+  width: 100%;
+}
+input:focus, input:hover {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1.5px 3px rgba(0, 0, 0, 0.2);
+}
+input::placeholder {
+  opacity: 0.5;
+  text-align: center;
+}
+
+.btn {
+  height: 3rem;
+  border-radius: 0.5em;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5em;
+  color: #FFFFFF;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn.btn--primary {
+  background: linear-gradient(to right, #FF713B, #FFA51B);
+}
+
+.container {
+  display: grid;
+  grid-template: "section1" "section-2";
+}
+.container .section {
+  padding: 0 2rem;
+}
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .container .section-1 {
+    grid-column: 1/4;
+  }
+  .container .section-2 {
+    grid-column: 4/6;
+  }
+}
+
+.section-1 {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.section-1 .action {
+  padding-bottom: 2rem;
+}
+
+.section-2 {
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-1 > *,
+.section-2 > * {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-1 {
+  background: url("https://unsplash.com/photos/3YvFXvDrFyM/download?force=true&w=2400") center center/cover no-repeat rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  color: #FFFFFF;
+  text-align: center;
+}
+.section-1 .subtitle {
+  border-top: 1em solid #EF811A;
+  border-image: linear-gradient(to right top, #ef7019, #ECB088) 1;
+  color: #EF811A;
+  display: inline-block;
+  font-weight: 600;
+  padding-top: 0.75em;
+  text-transform: uppercase;
+}
+.section-1 .title {
+  color: #FFFFFF;
+  font-weight: 400;
+}
+.section-1 .action {
+  color: #EF811A;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.section-2 .registration .title {
+  color: #404040;
+  font-weight: 900;
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+}
+.section-2 .registration .action {
+  color: #EF811A;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+}
+.section-2 .registration .desc {
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5em;
+  padding: 0.5em;
+}
+.section-2 .registration .note {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+}
+
+.btn.btn--primary {
+  transform: scale(1);
+  transition: transform 500ms ease-in-out 0s;
+}
+.btn.btn--primary:hover, .btn.btn--primary:focus {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=main.css.map */

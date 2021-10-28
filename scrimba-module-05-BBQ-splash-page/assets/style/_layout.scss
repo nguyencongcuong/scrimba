@@ -1,0 +1,49 @@
+@use "variable" as *;
+@use "mixins" as *;
+
+.container {
+	display: grid;
+	grid-template: "section1" "section-2";
+
+	.section {
+		padding: 0 $space2;
+	}
+
+	@media (min-width: $breakpointLg) {
+		grid-template-columns: repeat(5, 1fr);
+		.section-1 {
+			grid-column: 1 / 4;
+		}
+		.section-2 {
+			grid-column: 4 / 6;
+		}
+	}
+}
+
+.section-1 {
+	align-items: center;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	min-height: 100vh;
+
+	.action {
+		padding-bottom: $space2;
+	}
+}
+
+.section-2 {
+	min-height: 100vh;
+	align-items: center;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+.section-1 > *,
+.section-2 > * {
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}

@@ -1,0 +1,69 @@
+@use "variable" as *;
+@use "mixins" as *;
+
+.section-1 {
+	background: url("https://unsplash.com/photos/3YvFXvDrFyM/download?force=true&w=2400") center center/cover no-repeat rgba(0, 0, 0, 0.6);
+	background-blend-mode: darken;
+	color: $color-white;
+	text-align: center;
+
+	.subtitle {
+		border-top: 1em solid $color-orange;
+		border-image: linear-gradient(to right top, #ef7019, #ECB088) 1;
+		color: $color-orange;
+		display: inline-block;
+		font-weight: 600;
+		padding-top: 0.75em;
+		text-transform: uppercase;
+	}
+
+	.title {
+		color: $color-white;
+		font-weight: 400;
+	}
+
+	.action {
+		color: $color-orange;
+		font-size: 1rem;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+}
+
+.section-2 {
+	.registration {
+		.title {
+			color: $color-black;
+			font-weight: 900;
+			font-size: 1.6rem;
+			margin-bottom: 0.5em;
+		}
+
+		.action {
+			color: $color-orange;
+			font-size: 1rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			margin-bottom: 1.5em;
+		}
+
+		.desc {
+			color: rgba(0, 0, 0, 0.5);
+			margin-bottom: 1.5em;
+			padding: 0.5em;
+		}
+
+		.note {
+			color: rgba(0, 0, 0, 0.5);
+			margin: $space1;
+		}
+	}
+}
+
+.btn.btn--primary {
+	transform: scale(1);
+	transition: transform 500ms ease-in-out 0s;
+	&:hover, &:focus {
+		transform: scale(1.1);
+	}
+}

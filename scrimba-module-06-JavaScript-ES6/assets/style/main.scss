@@ -1,0 +1,23 @@
+@use "variable" as *;
+@use "mixins" as *;
+@use "base" as *;
+@use "layout" as *;
+@use "components" as *;
+
+h1 {
+	color: #666;
+	letter-spacing: 1rem;
+}
+
+.test-img {
+	height: 100vh;
+	object-fit: cover;
+}
+
+.shape {
+	border-bottom: 50px solid hotpink;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 0;
+}

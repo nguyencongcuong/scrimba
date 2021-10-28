@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 100%;
+  line-height: 1.8;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: lightsteelblue;
+  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  opacity: 0.8;
+  transition: all .5s ease-in-out;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  opacity: 1;
+}
+
+.container {
+  grid-column: 1 / span 3;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #f1f1f1;
+  padding: 20px;
+}
+
+.game-message {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+@media (min-width: 640px) {
+  .container {
+    grid-column: 2 / span 1;
+  }
+}
+
+.players {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+
+  font-size: 2rem;
+  text-align: center;
+}
+.players > div {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
+}
+.score {
+  background-color: #a1bbc6;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.dice {
+  background-color: #68675e;
+  color: white;
+  border-radius: 5px;
+  padding: 30px;
+  min-width: 100px;
+}
+.dice.active {
+  background-color: #393934;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}

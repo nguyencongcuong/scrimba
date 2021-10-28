@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+html {
+	font-size: 16px;
+	font-family: "Segoe UI", sans-serif;
+	line-height: 1.8;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.8rem;
+}
+
+small {
+	font-size: 80%;
+}
